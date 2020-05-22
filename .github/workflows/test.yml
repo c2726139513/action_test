@@ -14,14 +14,17 @@ jobs:
     - name: Install build dependencies
       run: |
         #sudo apt-get update
-        sudo apt-get install -y wget git
-    - name: wget
+        sudo apt-get install -y wget git pdfcrack
+    - name: pdfcrack
       run: |
-        pwd
-        mkdir -p /home/runner/download
-        cd /home/runner/download
-        cd /home/runner/work/action_test/action_test
-        ls -l /usr/bin
+        pdfcrack -f 1.pdf -n 4 -c abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\%\^\&\*\(\)\-\_\+\=\~\`\[\]\{\}\|\\\:\;\"\'\<\>\,\.\?\/\
+    #- name: wget
+      #run: |
+        #pwd
+        #mkdir -p /home/runner/download
+        #cd /home/runner/download
+        #cd /home/runner/work/action_test/action_test
+        #ls -l /usr/bin
         #wget "https://play.googleapis.com/download/by-token/download?token=AOTCm0RPWHyQfk3rPvQ_lWtcvGexmBp3oqRv5d7E-coRD56dISXfBKkNVuJaINQmKA6Xz14lKZ4iuoZ0vwoIpAeoGWT5NdUrxX-R58si1JGNnMQtbfDA8zaYpvktod0uKNcblRwxZjqQjZwaavn6VANlfKUZ7aYr3IM90Mb4uB1K4eKIX1mgOgtY-5uMyK9HnsXQ1yrU703bZQHOf7J0YQ2ewsPUb_7v5wELSko__zbEHQG78EvxjwnhTWLaAQ8Kj031KUfmmnMZAX_gjBhG5geJQikNICKLHNS7-IlU2UeTf11GSG83oPt7Y-1oadY9YeFSalUupBhmFBmnMM2zdExHntw&cpn=YUD7ejLfdPysYDdZ#15630250" -O video.apk
         #git clone https://github.com/openwrt/openwrt.git
         #wget "https://archive.archlinux.org/packages/p/php-apcu/php-apcu-5.1.17-1-x86_64.pkg.tar.xz"
