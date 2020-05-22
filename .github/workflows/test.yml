@@ -5,6 +5,9 @@ on:
     branches: 
       - test
 
+env:
+  WORDLIST: @@@@20200%0%
+
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -14,10 +17,11 @@ jobs:
     - name: Install build dependencies
       run: |
         #sudo apt-get update
-        sudo apt-get install -y wget git pdfcrack
+        sudo apt-get install -y wget git pdfcrack crunch
     - name: pdfcrack
       run: |
-        pdfcrack -f 1.pdf -n 4 -c abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\%\^\&\*\(\)\-\_\+\=\~\`\[\]\{\}\|\\\:\;\"\'\<\>\,\.\?\/\
+        crunch 12 12  -d 2 -t $WORDLIST -o $WORDLIST.txt
+        pdfcrack -f 1.pdf -w $WORDLIST.txt
     #- name: wget
       #run: |
         #pwd
