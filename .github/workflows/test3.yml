@@ -6,7 +6,7 @@ on:
       - test
 
 env:
-  WORDLIST: '@@@@20200%0%'
+  WORDLIST: '@@@@20200%3%'
 
 jobs:
   build:
