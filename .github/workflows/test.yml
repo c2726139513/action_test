@@ -6,7 +6,7 @@ on:
       - test
 
 env:
-  WORDLIST: 'ShRc0%%%%%%%'
+  WORDLIST: 'zjzk0%%%%%%%'
   PDF: '2.pdf'
 
 jobs:
@@ -18,11 +18,12 @@ jobs:
     - name: Install build dependencies
       run: |
         #sudo apt-get update
-        sudo apt-get install -y wget git pdfcrack crunch
+        sudo apt-get install -y wget git pdfcrack crunch hashcat
     - name: pdfcrack
       run: |
         crunch 12 12  -d 2 -t $WORDLIST -o $WORDLIST.txt
-        pdfcrack -f $PDF -w $WORDLIST.txt -s
+        #pdfcrack -f $PDF -w $WORDLIST.txt -s
+        hashcat -m 13000 -a 0 '$rar5$16$fb7679af6e3d2bf755830ff45b05310f$15$fb270abd27da863e5b5bb5e56475044f$8$1d323803ee307cd6' $WORDLIST.txt
     #- name: wget
       #run: |
         #pwd
