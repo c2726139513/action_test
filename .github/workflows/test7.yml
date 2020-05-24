@@ -6,8 +6,8 @@ on:
       - test
 
 env:
-  LENTH: 12
-  WORDLIST: 'zjzk7%%%%%%%'
+  LENTH: 10
+  WORDLIST: 'cxl7%%%%%%'
   PDF: '2.pdf'
 
 jobs:

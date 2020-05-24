@@ -1,4 +1,4 @@
-name: Test6
+name: Test1
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 env:
   LENTH: 10
-  WORDLIST: 'cxl6%%%%%%'
+  WORDLIST: 'cxl1%%%%%%'
   PDF: '2.pdf'
 
 jobs:
