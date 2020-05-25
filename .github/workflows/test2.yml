@@ -6,7 +6,7 @@ on:
       - test
 
 env:
-  LENTH: 7
+  LENTH: 12
   #LETTER1: Cxl0
   #LETTER2: Zjzk0
   WORDLIST: 'Zjzk2%%%%%%%'
