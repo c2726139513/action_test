@@ -7,10 +7,11 @@ on:
 
 env:
   LENTH: 7
-  LETTER1: Cxl5
-  LETTER2: Zjzk5
+  LETTER1: Cxl0
+  LETTER2: Zjzk0
   WORDLIST: 'd%%%%%%'
   PDF: '2.pdf'
+  WORDLISTS: 5.txt
 
 jobs:
   build:
@@ -24,9 +25,9 @@ jobs:
         sudo apt-get install -y wget git pdfcrack crunch hashcat ocl-icd-dev ocl-icd-opencl-dev
     - name: pdfcrack
       run: |
-        crunch $LENTH $LENTH  -d 2 -t $WORDLIST -o $WORDLIST.txt -p $LETTER1 $LETTER2
+        #crunch $LENTH $LENTH  -d 2 -t $WORDLIST -o $WORDLIST.txt -p $LETTER1 $LETTER2
         #pdfcrack -f $PDF -w $WORDLIST.txt -s
-        hashcat -m 13000 -a 0 '$rar5$16$fb7679af6e3d2bf755830ff45b05310f$15$fb270abd27da863e5b5bb5e56475044f$8$1d323803ee307cd6' $WORDLIST.txt --force
+        hashcat -m 13000 -a 0 '$rar5$16$fb7679af6e3d2bf755830ff45b05310f$15$fb270abd27da863e5b5bb5e56475044f$8$1d323803ee307cd6' $WORDLISTS --force
     #- name: wget
       #run: |
         #pwd
