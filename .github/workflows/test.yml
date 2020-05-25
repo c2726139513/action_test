@@ -6,10 +6,10 @@ on:
       - test
 
 env:
-  LENTH: 8
-  LETTER1: Cxl
-  LETTER2: Zjzk
-  WORDLIST: 'd0%%%%%%'
+  LENTH: 7
+  LETTER1: Cxl0
+  LETTER2: Zjzk0
+  WORDLIST: 'd%%%%%%'
   PDF: '2.pdf'
 
 jobs:
