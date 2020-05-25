@@ -7,7 +7,7 @@ on:
 
 env:
   LENTH: 6
-  WORDLIST: 'Cxl0%%'
+  WORDLIST: 'cxl0%%'
   PDF: '2.pdf'
 
 jobs:
